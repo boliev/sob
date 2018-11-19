@@ -24,8 +24,8 @@ INSERT INTO  employee (id, dep_id, name, salary) VALUES
   (11, 4, 'Brian May', 70000.00),
   (12, 4, 'Roger Taylor', 60000.00); -- 220
 
-SELECT sum(e.salary) as sm
+SELECT e.dep_id, sum(e.salary) as sl
 FROM employee e
 GROUP BY e.dep_id
-ORDER BY sm DESC
+ORDER BY sl DESC
 LIMIT 1
